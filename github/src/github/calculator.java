@@ -48,7 +48,7 @@ public class calculator {
 
 		default:
 			System.out.println("defult value");
-             System.out.println();
+             
 		}
 
 	}
