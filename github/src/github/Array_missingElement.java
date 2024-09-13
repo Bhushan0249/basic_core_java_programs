@@ -9,7 +9,7 @@ public class Array_missingElement {
 
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
-		Integer arr[] = { 1, 2, 3, 6 ,15};
+		Integer arr[] = { 1, 2, 3, 5 ,100};
 		Integer bhu = Arrays.asList(arr).stream().max((a, b) -> (a - b)).get();
 
 		int copy[] = new int[bhu + 1];
