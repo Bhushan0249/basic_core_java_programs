@@ -2,7 +2,7 @@ package github;
 
 public class Array_Roted_3Time {
 
-	// create the program and rated the array 'N' times.
+	//  create the java program and Rotate the array right side N time.
 	public static void main(String[] args) {
 
 		int arr[] = { 45, 765, 86, 35, 678, 35, 678, 35, 87, 478, 676 };
