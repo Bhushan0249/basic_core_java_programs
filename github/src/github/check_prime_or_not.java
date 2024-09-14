@@ -46,10 +46,10 @@ public class check_prime_or_not {
 			}
 			System.out.println(map);
 		} catch (InputMismatchException a) {
-			System.out.println(a);
+			System.out.println(a.getStackTrace());
 
 		} catch (Exception a) {
-			System.out.println(a);
+			System.out.println(a.getStackTrace());
 		}
 	}
 
