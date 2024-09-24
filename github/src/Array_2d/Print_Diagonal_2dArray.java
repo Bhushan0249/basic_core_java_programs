@@ -1,6 +1,6 @@
 package Array_2d;
 
-public class Print_Adi_Diagonal_2dArray {
+public class Print_Diagonal_2dArray {
 	// print  only diagonal elements, and other element print 0 of an array.
 
 	public static void main(String[] args) {
