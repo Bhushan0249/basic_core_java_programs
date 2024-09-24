@@ -1,7 +1,6 @@
 package Array_2d;
 
 public class PrintDiagonal_addi_2dArray {
-	// this is a task of mock .
 // print only diagonal elements of an array.
 
 	public static void main(String[] args) {
