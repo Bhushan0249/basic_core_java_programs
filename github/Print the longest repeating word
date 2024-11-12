@@ -1,0 +1,52 @@
+package ProgramPlacement;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.Scanner;
+
+public class Task {
+//create the program and print the longest repeating word in sentence in String.
+// show the value Min. repeating 2 time. avoid a 1 time word.
+	private static List<Entry<String, Integer>> LongestRW(String str) {
+		// convert to lowercase.
+		str = str.toLowerCase();
+		// split sentence in space.
+		String[] arr = str.split(" ");
+
+		LinkedHashMap<String, Integer> map = new LinkedHashMap<String, Integer>();
+
+		// check the contins key if present than go to if block or not present than go
+		// to else block.
+		for (int i = 0; i < arr.length; i++) {
+			if (map.containsKey(arr[i])) {
+				map.put(arr[i], map.get(arr[i]) + 1);
+			} else {
+				map.put(arr[i], 1);
+			}
+		}
+		// sort the DESC order and remove word present in one time
+		List<Entry<String, Integer>> list = map.entrySet().stream().sorted((a, b) -> (b.getValue() - a.getValue()))
+				.filter(a -> a.getValue() > 1).toList();
+		// save the filter data in (list).
+
+		// return list.
+		return list;
+
+	}
+
+	public static void main(String[] args) {
+
+		// give a input in user.
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the sentence......");
+		// save the input in str variable.
+		String str = s.nextLine();
+
+		// method call or get the data.
+		List<Entry<String, Integer>> bhu = Task.LongestRW(str);
+		System.out.println(bhu);
+
+	}
+
+}
