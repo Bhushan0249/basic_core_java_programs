@@ -1,0 +1,60 @@
+package ProgramPlacement;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Task {
+// create the program and print the missing Element in array .
+
+	private static ArrayList<Integer> Missing(int[] arr) {
+
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		// check the max element in array.
+		int max = arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
+				max = arr[i];
+			}
+		}
+
+		int copy[] = new int[max + 1];
+
+		for (int i : arr) {
+			copy[i] = 1;
+		}
+
+		for (int i = 0; i < copy.length; i++) {
+			if (copy[i] == 0) {
+				// add i in array list.
+				list.add(i);
+			}
+		}
+		// return list.
+		return list;
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the array limit....");
+		// size of array
+		int size = s.nextInt();
+
+		int arr[] = new int[size];
+
+		System.out.println("Enter the " + arr.length + " Elements....");
+		// add element in array
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = s.nextInt();
+
+		}
+		// method call and get the array list
+		ArrayList<Integer> bhu = Task.Missing(arr);
+		// print list
+		System.out.println(bhu);
+
+	}
+
+}
