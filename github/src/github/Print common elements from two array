@@ -1,0 +1,44 @@
+package ProgramPlacement;
+
+import java.util.ArrayList;
+
+public class Task {
+
+// print the common elements from two array.
+	private static ArrayList<Integer> CommonElements(int arr1[], int arr2[]) {
+
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		for (int i = 0; i < arr1.length; i++) {
+			boolean flag = false;
+			for (int j = 0; j < arr2.length; j++) {
+				if (arr1[i] == arr2[j]) {
+					flag = true;
+				}
+
+			}
+			if (flag) {
+				// add to list.
+				list.add(arr1[i]);
+			}
+
+		}
+		// return list.
+		return list;
+
+	}
+
+	public static void main(String[] args) {
+
+		int arr1[] = { 2, 4, 6, 75, 54, 56, 34, 45, 44 };
+		int arr2[] = { 56, 89, 57, 576, 346, 34, 45, 44 };
+
+		// method call .
+		ArrayList<Integer> bhu = Task.CommonElements(arr1, arr2);
+
+		// print the result.
+		System.out.println(bhu);
+
+	}
+
+}
