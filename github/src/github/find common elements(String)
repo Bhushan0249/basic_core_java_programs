@@ -1,0 +1,62 @@
+package ProgramPlacement;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Task {
+	// Write a Java program to find common elements between two arrays (string
+	// values).
+
+	private static ArrayList<String> commonElements(String[] arr1, String[] arr2) {
+
+		ArrayList<String> list = new ArrayList<String>();
+
+		for (int i = 0; i < arr1.length; i++) {
+			boolean flag = false;
+			for (int j = 0; j < arr2.length; j++) {
+				if (arr1[i].equals(arr2[j])) {
+					flag = true;
+				}
+			}
+			if (flag) {
+				list.add(arr1[i]);
+			}
+		}
+		return list;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the 1st array size (Number)...");
+		int size1 = s.nextInt();
+
+		String arr1[] = new String[size1];
+
+		System.out.println("Enter the " + arr1.length + " Elemenent (String)...");
+
+		for (int i = 0; i < arr1.length; i++) {
+			arr1[i] = s.next();
+		}
+
+		System.out.println("Enter the 2nd array size (Number)...");
+
+		int size2 = s.nextInt();
+
+		String arr2[] = new String[size2];
+
+		System.out.println("Enter the " + arr2.length + " Elements (String)...");
+
+		for (int i = 0; i < arr2.length; i++) {
+			arr2[i] = s.next();
+		}
+
+		ArrayList<String> bhu = Task.commonElements(arr1, arr2);
+
+		System.out.println(bhu);
+
+		s.close();
+
+	}
+
+}
