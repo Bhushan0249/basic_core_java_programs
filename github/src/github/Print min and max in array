@@ -1,0 +1,50 @@
+package ProgramPlacement;
+
+import java.util.Scanner;
+
+public class Min_Max_Element_inArray {
+// create the program and print the minimum and maximum value in arrray.
+
+	private static String Min_Max(int arr[]) {
+
+		int max = arr[0];
+		int min = arr[0];
+
+		// max
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > max) {
+				max = arr[i];
+			}
+		}
+
+		// min
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] < min) {
+				min = arr[i];
+			}
+		}
+
+		return "min is: " + min + " and max is: " + max;
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the array size....");
+		int size = s.nextInt();
+
+		int arr[] = new int[size];
+
+		System.out.println("Enter the " + arr.length + " Elements.....");
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = s.nextInt();
+		}
+		String bhu = Min_Max_Element_inArray.Min_Max(arr);
+
+		System.out.println(bhu);
+
+	}
+
+}
